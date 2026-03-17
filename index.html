@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- AQUI: Tags de SEO e Compartilhamento (Meta Tags) -->
+    <title>Arthur Ceron - Consultoria Online de Treino</title>
+    
+    <!-- AQUI: Favicon (O ícone que aparece na aba do navegador) -->
+    <link rel="icon" type="image/png" href="img/logo2.png">
+    
+    <meta name="description" content="Transforme seu corpo com a consultoria online do Arthur Ceron. Treinos individualizados, acompanhamento via WhatsApp, análise de vídeos e foco em resultados reais.">
+    <meta name="keywords" content="personal trainer, consultoria online, treino personalizado, Arthur Ceron, emagrecimento, hipertrofia, fitness">
+    <meta name="author" content="Arthur Ceron">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (Para ficar bonito ao compartilhar no WhatsApp, Facebook, etc) -->
+    <meta property="og:title" content="Arthur Ceron - Consultoria Online">
+    <meta property="og:description" content="Treino personalizado e acompanhamento de verdade. Venha alcançar sua melhor versão!">
+    <meta property="og:image" content="img/logo2.png"> <!-- Imagem que aparece no link do WhatsApp -->
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Seu CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Configuração do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#ff6501', // Laranja Neon Vibrante
+                            dark: '#ff6501',
+                        },
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#121212',
+                            700: '#1c1c1c'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar Mobile -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 pt-2 pb-4">
+        <!-- Fundos para transição suave -->
+        <div id="navbar-bg" class="absolute inset-0 bg-black/95 backdrop-blur-md opacity-0 transition-opacity duration-500 -z-10 shadow-lg"></div>
+        <div id="navbar-gradient" class="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent transition-opacity duration-500 -z-10"></div>
+
+        <div class="relative z-10 max-w-md mx-auto px-6 py-2 flex justify-between items-center">
+            
+            <!-- AQUI: Deixamos apenas a Logo -->
+            <div class="flex items-center">
+                <!-- IMAGEM DA LOGO -->
+                <img id="navbar-logo" src="img/logo2.png" alt="Logo Arthur Ceron" class="h-16 sm:h-20 w-auto mix-blend-screen object-contain transition-all duration-500">
+            </div>
+            
+            <a href="#planos" class="bg-brand text-black font-bold text-xs px-4 py-2 rounded-full hover:bg-white transition-colors shadow-lg hover:shadow-brand/50">
+                COMEÇAR AGORA
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+        <!-- Imagem para Celulares (some a partir de telas médias - sm:hidden) -->
+            <img src="img/fundo-mobile.png" class="w-full h-full object-cover opacity-40 sm:hidden" alt="Treino Intenso Mobile">
+            
+            <!-- Imagem para Computadores/Tablets (escondida em celulares - hidden sm:block) -->
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop" class="hidden sm:block w-full h-full object-cover opacity-40" alt="Treino Intenso Desktop">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-md mx-auto px-6 text-center flex flex-col items-center">
+            <div class="inline-block px-3 py-1 border border-brand/30 rounded-full bg-brand/10 mb-6 animate-pulse">
+                <span class="text-brand text-xs font-bold tracking-widest uppercase">Vagas Limitadas</span>
+            </div>
+            
+            <h1 class="text-2xl font-black leading-tight mb-4 uppercase italic">
+                Resultado com Método, <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-white">Acompanhamento e Estratégia</span>
+            </h1>
+            
+            <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                Não é apenas uma consultoria. É uma CONSULTORIA COMPLETA, com acompanhamento próximo, estratégia individual e foco total em resultados sustentáveis.
+            </p>
+
+            <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                Você terá orientação diária, correção técnica dos exercícios e suporte direto para evoluir com segurança, consistência e clareza - Tudo adaptado à sua rotina, objetivos e nível atual.
+            </p>
+            <div class="flex flex-col w-full gap-4">
+                <a href="#planos" class="w-full bg-brand hover:bg-white text-black font-black text-lg py-4 rounded-xl shadow-[0_0_20px_rgba(204,255,0,0.3)] transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                    QUERO RESULTADOS <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#como-funciona" class="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-lg py-4 rounded-xl backdrop-blur-sm transition-all">
+                    Como funciona?
+                </a>
+            </div>
+
+            <div class="mt-8 flex items-center justify-center gap-2 text-sm text-gray-400">
+                <div class="flex -space-x-2">
+                    <div class="w-8 h-8 rounded-full bg-gray-600 border-2 border-dark-900"></div>
+                    <div class="w-8 h-8 rounded-full bg-gray-500 border-2 border-dark-900"></div>
+                    <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-dark-900"></div>
+                </div>
+                <span>+300 alunos transformados</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="py-16 bg-dark-800 clip-path-diagonal relative z-20 -mt-10">
+        <div class="max-w-md mx-auto px-6">
+            <h2 class="text-3xl font-black uppercase italic mb-8 text-center">Chega de <span class="text-brand">Perder Tempo</span></h2>
+            
+            <div class="space-y-6">
+                <div class="bg-dark-700 p-6 rounded-2xl border border-white/5">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-xmark text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Sem Planejamento</h3>
+                    <p class="text-gray-400 text-sm">Treinos genéricos, sem lógica e sem progresso, fazem você gastar tempo e energia sem extrair seu verdadeiro potencial.</p>
+                </div>
+
+                <div class="bg-dark-700 p-6 rounded-2xl border border-brand/20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-brand/10 rounded-bl-full"></div>
+                    <div class="w-12 h-12 bg-brand/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-check text-brand text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 text-white">Com Minha Consultoria</h3>
+                    <p class="text-gray-300 text-sm">Um método personalizado, estratégico e ajustado à sua realidade, que transforma esforço em resultado de forma consistente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que recebe na consultoria-->
+      <section class="py-20 bg-dark-800 border-t border-white/5">
+        <div class="max-w-md md:max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-brand font-bold tracking-widest text-sm uppercase">Incluso</span>
+                <h2 class="text-3xl font-black mt-2 text-white uppercase italic">
+                    O QUE VOCÊ <span class="text-destaque">RECEBE NA CONSULTORIA</span>
+                </h2>
+            </div>
+
+            <!-- Grid de 6 itens (1 coluna no celular, 2 em tablets) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Item 1 -->
+                <div class="bg-dark-900 p-6 rounded-xl border border-white/5 hover:border-brand/50 transition-all group shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                            <i class="fa-solid fa-heart-pulse text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white mb-1">Treino 100% individualizado</h3>
+                            <p class="text-gray-400 text-sm">Pensado para sua rotina e objetivos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-dark-900 p-6 rounded-xl border border-white/5 hover:border-brand/50 transition-all group shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                            <i class="fa-solid fa-dumbbell text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white mb-1">Planejamento Periodizado</h3>
+                            <p class="text-gray-400 text-sm">Com controle de volume, intensidade e frequência.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-dark-900 p-6 rounded-xl border border-white/5 hover:border-brand/50 transition-all group shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                            <i class="fa-solid fa-mobile-screen text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white mb-1">Acesso a Aplicativo Exclusivo</h3>
+                            <p class="text-gray-400 text-sm">Acesso a aplicativo exclusivo, com vídeos e orientações técnicas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-dark-900 p-6 rounded-xl border border-white/5 hover:border-destaque/50 transition-all group shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 bg-destaque/10 rounded-lg flex items-center justify-center group-hover:bg-destaque/20 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-destaque text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white mb-1">Acompanhamento via WhatsApp</h3>
+                            <p class="text-gray-400 text-sm">Tire dúvidas sobre execução, dores ou substituição de exercícios diretamente comigo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                 <div class="bg-dark-900 p-6 rounded-xl border border-white/5 hover:border-brand/50 transition-all group shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                            <i class="fa-solid fa-video text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white mb-1">Análise de Vídeos</h3>
+                            <p class="text-gray-400 text-sm">Direito a chamadas de vídeos, para alinhamento e correções.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="bg-dark-900 p-6 rounded-xl border border-white/5 hover:border-destaque/50 transition-all group shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 shrink-0 bg-destaque/10 rounded-lg flex items-center justify-center group-hover:bg-destaque/20 transition-colors">
+                            <i class="fa-solid fa-gift text-destaque text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white mb-1">Evolução Constante</h3>
+                            <p class="text-gray-400 text-sm">Evolução constante do treino, conforme seus resultados.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="py-20 bg-dark-900">
+        <div class="max-w-md mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-brand font-bold tracking-widest text-sm uppercase">Metodologia</span>
+                <h2 class="text-3xl font-black mt-2 text-white">COMO VAMOS <br>TRABALHAR</h2>
+            </div>
+
+            <div class="relative border-l-2 border-brand/30 ml-4 space-y-12">
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 bg-brand rounded-full shadow-[0_0_10px_#CCFF00]"></div>
+                    <h3 class="text-xl font-bold text-white mb-2">1. Anamnese Detalhada</h3>
+                    <p class="text-gray-400 text-sm">Após a compra do Plano selecionado, irei entrar em contato via WhatsApp e você recebe um questionário detalhado que permite uma análise precisa da sua saúde, rotina, condicionamento e objetivos, garantindo um planejamento totalmente personalizado.</p>
+                </div>
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 bg-dark-900 border-2 border-brand rounded-full"></div>
+                    <h3 class="text-xl font-bold text-white mb-2">2. Elaboração do Plano</h3>
+                    <p class="text-gray-400 text-sm">Com base na análise dos dados, elaboro um planejamento estratégico e periodizado, definindo volume, intensidade, frequência e progressões adequadas à sua realidade, cada treino é constituído com método, lógica e foco em resultados consistentes.</p>
+                </div>
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 bg-dark-900 border-2 border-brand rounded-full"></div>
+                    <h3 class="text-xl font-bold text-white mb-2">3. App Exclusivo</h3>
+                    <p class="text-gray-400 text-sm">Você recebe seu treino em um aplicativo exclusivo com vídeos explicativos, orientações técnicas e organização clara das sessões. Isso garante autonomia, e maior aproveitamento de cada treino.</p>
+                </div>
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 bg-dark-900 border-2 border-brand rounded-full"></div>
+                    <h3 class="text-xl font-bold text-white mb-2">4. Acompanhamento Contínuo</h3>
+                    <p class="text-gray-400 text-sm">Acompanhamentos próximo e constante via WhatsApp, com ajuste de treino, correções técnicas por vídeo e suporte para dúvidas ao longo do processo. O planejamento evolui junto com você, respeitando seu processo e suas respostas ao treinamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Galeria / Resultados -->
+    <section class="py-20 bg-dark-800">
+        <div class="max-w-md mx-auto px-6">
+            <h2 class="text-3xl font-black text-center mb-10 italic">RESULTADOS REAIS</h2>
+            
+            <!-- CARROSSEL DE IMAGENS -->
+            <div class="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl mb-6 group" id="results-carousel">
+                
+                <!-- Wrapper que vai se mover -->
+                <div class="flex h-full w-full transition-transform duration-500 ease-in-out" id="carousel-track">
+                    
+                    <!-- SLIDE 1 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Arthur Aluno.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 1">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Arthur</p>
+                            <p class="text-brand text-sm">-Ganho de 5kg</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Erica.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 2">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Erica</p>
+                            <p class="text-brand text-sm">Ganho de 7kg</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Adrean.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 3">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Adrean</p>
+                            <p class="text-brand text-sm">Ajuste postural + 5kg</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Cris.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 4">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Cris</p>
+                            <p class="text-brand text-sm">Perdeu 19kg</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 5 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Christofer.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 5">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Christofer</p>
+                            <p class="text-brand text-sm">Mais de 3 anos de trabalho</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 6 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Ingrid.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 6">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Ingrid</p>
+                            <p class="text-brand text-sm">Mais de 3 anos de trabalho</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 7 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Joao Augusto.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 7">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">João Augusto</p>
+                            <p class="text-brand text-sm">Perdeu 33kg</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 8 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Thaissa.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 8">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Thaissa</p>
+                            <p class="text-brand text-sm">Recomposição corporal (gordura + musculo)</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 9 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Jorge.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 9">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Jorge</p>
+                            <p class="text-brand text-sm">Ganho de 14kg</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 10 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Kaua.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 10">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Kaua</p>
+                            <p class="text-brand text-sm">Ganho de 13kg</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 11 -->
+                    <div class="w-full shrink-0 h-full relative">
+                        <img src="img/Kauan.jpeg" class="w-full h-full object-cover" alt="Resultado Aluno 11">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6">
+                            <p class="font-bold text-xl text-white">Kauan</p>
+                            <p class="text-brand text-sm">Perca de 6kg</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botões de Controle (Anterior / Próximo) -->
+                <button id="btn-prev" class="absolute top-1/2 left-3 -translate-y-1/2 w-10 h-10 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-brand transition-colors z-10 backdrop-blur-sm">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="btn-next" class="absolute top-1/2 right-3 -translate-y-1/2 w-10 h-10 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-brand transition-colors z-10 backdrop-blur-sm">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                
+            </div>
+            <!-- FIM DO CARROSSEL -->
+
+            <p class="text-center text-gray-400 text-sm px-4">
+                "O acompanhamento fez toda a diferença. Nunca consegui manter a constância antes."
+            </p>
+        </div>
+    </section>
+
+    <!-- Planos e Preços -->
+    <section id="planos" class="py-20 bg-dark-900 relative">
+        <div class="max-w-md mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-black text-center mb-4">PLANOS</h2>
+            <p class="text-center text-gray-400 mb-12">Escolha o melhor período para sua transformação</p>
+
+            <div class="space-y-6">
+                <!-- Plano Mensal -->
+                <div class="bg-dark-800 rounded-2xl p-8 border border-white/10 hover:border-brand/50 transition-colors">
+                    <h3 class="text-xl font-bold text-gray-400 uppercase mb-2">Mensal</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-sm text-gray-400">R$</span>
+                        <span class="text-4xl font-black text-white">169</span>
+                        <span class="text-sm text-gray-400">,99</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> Treino Personalizado</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> App com vídeos</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> Suporte via Chamada de Vídeo no WhatsApp</li>
+                    </ul>
+                    <a href="https://mtapp.com.br/pay/c/6f314a58" target="_blank" rel="noopener noreferrer" class="block w-full py-4 rounded-xl border border-white/20 text-center font-bold hover:bg-white hover:text-black transition-all">ESCOLHER MENSAL</a>
+                </div>
+
+                <!-- Plano Trimestral -->
+                <div class="bg-dark-800 rounded-2xl p-8 border border-white/10 hover:border-brand/50 transition-colors">
+                    <h3 class="text-xl font-bold text-gray-400 uppercase mb-2">Trimestral</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-sm text-gray-400">3x de R$</span>
+                        <span class="text-4xl font-black text-white">149</span>
+                        <span class="text-sm text-gray-400">,99</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> Treino Personalizado</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> App com vídeos</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> Suporte via Chamada de Vídeo no WhatsApp</li>
+                    </ul>
+                    <a href="https://mtapp.com.br/pay/c/583ee920" target="_blank" rel="noopener noreferrer" class="block w-full py-4 rounded-xl border border-white/20 text-center font-bold hover:bg-white hover:text-black transition-all">ESCOLHER TRIMESTRAL</a>
+                </div>
+
+                <!-- Plano Semestral -->
+                <div class="bg-dark-800 rounded-2xl p-8 border border-white/10 hover:border-brand/50 transition-colors">
+                    <h3 class="text-xl font-bold text-gray-400 uppercase mb-2">Semestral</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-sm text-gray-400">6x de R$</span>
+                        <span class="text-4xl font-black text-white">139</span>
+                        <span class="text-sm text-gray-400">,99</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> Treino Personalizado</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> App com vídeos</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-brand"></i> Suporte via Chamada de Vídeo no WhatsApp</li>
+                    </ul>
+                    <a href="https://mtapp.com.br/pay/c/9c148bdb" target="_blank" rel="noopener noreferrer" class="block w-full py-4 rounded-xl border border-white/20 text-center font-bold hover:bg-white hover:text-black transition-all">ESCOLHER SEMESTRAL</a>
+                </div>
+
+                <!-- Plano Anual -->
+                <div class="bg-dark-800 rounded-2xl p-8 border-2 border-brand relative transform scale-105 shadow-[0_0_30px_rgba(204,255,0,0.1)]">
+                    <div class="absolute top-0 right-0 bg-brand text-black text-xs font-bold px-3 py-1 rounded-bl-lg">MAIS VENDIDO</div>
+                    <h3 class="text-xl font-bold text-brand uppercase mb-2">Anual</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-sm text-gray-400">12x de R$</span>
+                        <span class="text-5xl font-black text-white">129</span>
+                        <span class="text-sm text-gray-400">,99</span>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-6">Total: R$ 299,70 (Desconto de 20%)</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-white"><i class="fa-solid fa-check text-brand"></i> <strong>Tudo do mensal</strong></li>
+                        <li class="flex items-center gap-3 text-sm text-white"><i class="fa-solid fa-check text-brand"></i> Periodização de 3 meses</li>
+                        <li class="flex items-center gap-3 text-sm text-white"><i class="fa-solid fa-check text-brand"></i> Análise de Postura</li>
+                        <li class="flex items-center gap-3 text-sm text-white"><i class="fa-solid fa-check text-brand"></i> Guia de Suplementação</li>
+                    </ul>
+                    <a href="https://mtapp.com.br/pay/c/82e5772a" target="_blank" rel="noopener noreferrer" class="block w-full py-4 rounded-xl bg-brand text-black text-center font-black hover:bg-white transition-all shadow-lg animate-pulse-slow">QUERO ESTE PLANO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Personal -->
+    <section class="py-20 bg-dark-800">
+        <div class="max-w-md mx-auto px-6 flex flex-col items-center text-center">
+            <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-brand mb-6">
+                <img src="img/arthur.jpeg" class="w-full h-full object-cover" alt="Foto Personal">
+            </div>
+            <h2 class="text-2xl font-bold mb-2">QUEM SOU EU?</h2>
+            <p class="text-brand font-bold mb-4 uppercase text-sm tracking-widest">Personal Trainer</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Sou Arthur Ceron, sócio-proprietário da Academia Soul Fitness, graduado em Educação Física (Licenciatura e Bacharelado) e Pós-graduado em Musculação Avançada. Especialista em treinamento de alta performance, ajudo pessoas a evoluírem com planejamento inteligente, individualização e constância, focando em resultados reais e sustentáveis.</p>
+            <div class="flex gap-4">
+               <a href="https://instagram.com/arthurceron_personal/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center hover:text-brand transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5554992959119" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center hover:text-brand transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+           </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-white/10">
+        <div class="max-w-md mx-auto px-6 text-center">
+            <div class="font-black text-2xl tracking-tighter mb-6">
+                CONSULTORIA<span class="text-brand">ONLINE</span>
+            </div>
+            <p class="text-gray-600 text-xs mb-8">
+                &copy; 2024 Todos os direitos reservados.<br>
+                Desenvolvido para alta performance.
+            </p>
+            <a href="https://wa.me/5554992959119" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center hover:scale-110 transition-transform whatsapp-float">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Seu Script JS -->
+    <script src="script.js"></script>
+
+    <!-- SCRIPT DA NAVBAR SUAVE -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const bg = document.getElementById('navbar-bg');
+            const grad = document.getElementById('navbar-gradient');
+            const nav = document.getElementById('navbar');
+            const logo = document.getElementById('navbar-logo');
+            
+            if (window.scrollY > 50) {
+                // Estado "Rolado" (Fundo Escuro e Logo menor)
+                bg.classList.remove('opacity-0');
+                bg.classList.add('opacity-100');
+                grad.classList.remove('opacity-100');
+                grad.classList.add('opacity-0');
+                nav.classList.remove('pb-4', 'pt-2');
+                nav.classList.add('pb-2', 'pt-1');
+                logo.classList.remove('h-16', 'sm:h-20');
+                logo.classList.add('h-12', 'sm:h-16');
+            } else {
+                // Estado "Topo" (Fundo Transparente/Gradiente e Logo maior)
+                bg.classList.add('opacity-0');
+                bg.classList.remove('opacity-100');
+                grad.classList.add('opacity-100');
+                grad.classList.remove('opacity-0');
+                nav.classList.add('pb-4', 'pt-2');
+                nav.classList.remove('pb-2', 'pt-1');
+                logo.classList.add('h-16', 'sm:h-20');
+                logo.classList.remove('h-12', 'sm:h-16');
+            }
+        });
+    </script>
+</body>
+</html>

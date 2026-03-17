@@ -1,0 +1,30 @@
+/* Efeito de corte diagonal nas seções */
+.clip-path-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+
+
+/* Texto vazado (apenas contorno) */
+.text-outline {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+/* Animação suave para o botão de WhatsApp */
+.whatsapp-float {
+    transition: all 0.3s ease-in-out;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Classe utilitária para esconder barra de rolagem se necessário */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
